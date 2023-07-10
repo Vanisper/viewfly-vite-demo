@@ -1,3 +1,3 @@
-# viewfly-ts-template
+# viewfly-vite-template
 
 ## 项目介绍
