@@ -1,0 +1,36 @@
+{
+  "name": "viewfly-vite-demo",
+  "version": "0.0.1",
+  "description_en": "This project is based on the front-end framework 'Viewfly' and uses a template built with Vite.",
+  "description_zh": "此项目是基于前端框架——Viewfly，并使用Vite构建的模板",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Vanisper/viewfly-vite-demo"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "author": "Vanisper",
+  "license": "MIT",
+  "keywords": [
+    "viewfly",
+    "vite"
+  ],
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.2",
+    "@types/node": "^20.4.1",
+    "less": "^4.1.3",
+    "tslib": "^2.6.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.4.2"
+  },
+  "dependencies": {
+    "@viewfly/core": "^0.0.2",
+    "@viewfly/platform-browser": "^0.0.2",
+    "@viewfly/router": "^0.0.2",
+    "@viewfly/scoped-css": "^0.0.3",
+    "uuid": "^9.0.0"
+  }
+}
