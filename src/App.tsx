@@ -40,17 +40,17 @@ export function App() {
                 justifyContent: "space-around",
               }}
             >
-              <Link active="active" exact to={`/${PageEnum.BASE_HOME}`}>
+              <Link active="active" exact to={`./${PageEnum.BASE_HOME}`}>
                 Home
               </Link>
               <Link
                 active="active"
-                to={`/${PageEnum.BASE_LIST}`}
+                to={`./${PageEnum.BASE_LIST}`}
                 queryParams={{ a: "xx" }}
               >
                 List
               </Link>
-              <Link active="active" to={`/${PageEnum.BASE_DETAIL}`}>
+              <Link active="active" to={`./${PageEnum.BASE_DETAIL}`}>
                 Detail
               </Link>
             </div>

@@ -11,7 +11,7 @@ export function Home() {
         <button
           type="button"
           onClick={() => {
-            router.navigateTo(`/${PageEnum.BASE_LIST}`)
+            router.navigateTo(`../${PageEnum.BASE_LIST}`)
           }}
         >
           跳转到列表
