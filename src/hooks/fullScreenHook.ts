@@ -1,4 +1,5 @@
 // import { ComponentPublicInstance, Directive, DirectiveBinding } from "vue";
+import { useRef } from '@viewfly/core';
 import { v4 as uuidv4 } from 'uuid'
 
 const __fullScreen__ = '__fullScreen__'
@@ -94,3 +95,12 @@ export class FullscreenHelper {
 //         }
 //     },
 // } as Directive;
+
+
+// ViewFly useRef
+export const fullScreenRef = useRef<HTMLElement>((element) => {
+    const fullScreen = new FullscreenHelper(element);
+    element.addEventListener("dblclick", () => {
+        fullScreen.toggle();
+    });
+});

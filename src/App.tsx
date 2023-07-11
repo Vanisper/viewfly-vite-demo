@@ -6,17 +6,10 @@ import { PageEnum } from "./enums/pageEnum";
 
 import img0 from "./assets/images/1.jpg";
 import img1 from "./assets/images/2.jpg";
-import { useEffect, useRef, useSignal } from "@viewfly/core";
-import { FullscreenHelper } from "./hooks/fullScreenHook";
+import { useEffect, useSignal } from "@viewfly/core";
+import { fullScreenRef } from "./hooks/fullScreenHook";
 
 export function App() {
-  const imgRef = useRef<HTMLElement>((element) => {
-    const fullScreen = new FullscreenHelper(element);
-    element.addEventListener("dblclick", () => {
-      fullScreen.toggle();
-    });
-  });
-
   const count = useSignal(0);
   useEffect(
     () => count(),
@@ -58,7 +51,7 @@ export function App() {
           </RootRouter>
           <hr />
           <h4>事件测试(双击图片局部dom全屏)</h4>
-          <img ref={imgRef} src={count() % 2 ? img0 : img1} width="100%" />
+          <img ref={fullScreenRef} src={count() % 2 ? img0 : img1} width="100%" />
           <hr />
         </HelloViewfly>
       </>
