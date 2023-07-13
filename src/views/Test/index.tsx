@@ -1,4 +1,3 @@
-import { scopedCSS } from "@viewfly/scoped-css";
 import style from "./style.module.less";
 import { FullscreenHelper } from "../../hooks/fullScreenHook";
 import { useRef } from "@viewfly/core";
@@ -11,7 +10,7 @@ const nodeRef = useRef<HTMLElement>((node) => {
   });
 });
 
-export const Test = scopedCSS(style, () => {
+export const Test = () => {
   return () => {
     return (
       <div>
@@ -31,4 +30,4 @@ export const Test = scopedCSS(style, () => {
       </div>
     );
   };
-});
+};

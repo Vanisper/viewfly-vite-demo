@@ -1,29 +1,20 @@
 import { Link, RootRouter, RouterOutlet } from "@viewfly/router";
 import { routes } from "./route";
 
-import { HelloViewfly } from "./components/HelloViewfly";
+import { HelloViewfly, count } from "./components/HelloViewfly";
 import { PageEnum } from "./enums/pageEnum";
 
 import img0 from "./assets/images/1.jpg";
 import img1 from "./assets/images/2.jpg";
-import { useEffect, useSignal } from "@viewfly/core";
+import { onMounted, useEffect, useRef, useSignal } from "@viewfly/core";
 import { fullScreenRef } from "./hooks/fullScreenHook";
+import { useProduce } from '@viewfly/hooks';
 
 export function App() {
-  const count = useSignal(0);
-  useEffect(
-    () => count(),
-    (newValue, oldValue) => {
-      console.log(
-        `数据在子元素中被改变, 数据由 ${oldValue} 变成了 ${newValue}`
-      );
-    }
-  );
-
   return () => {
     return (
       <>
-        <HelloViewfly count={count}>
+        <HelloViewfly >
           <hr />
           <RootRouter>
             <h4>路由测试</h4>
@@ -50,8 +41,12 @@ export function App() {
             <RouterOutlet config={routes}>未匹配到任何路由</RouterOutlet>
           </RootRouter>
           <hr />
-          <h4>事件测试(双击图片局部dom全屏)</h4>
-          <img ref={fullScreenRef} src={count() % 2 ? img0 : img1} width="100%" />
+          <h4>事件测试(双击图片局部dom全屏){count()}</h4>
+          <img
+            ref={fullScreenRef}
+            src={count() % 2 ? img0 : img1}
+            width="100%"
+          />
           <hr />
         </HelloViewfly>
       </>

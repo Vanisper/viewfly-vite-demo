@@ -20,17 +20,18 @@
   ],
   "devDependencies": {
     "@rollup/plugin-typescript": "^11.1.2",
-    "@types/node": "^20.4.1",
+    "@types/node": "^20.4.2",
     "less": "^4.1.3",
     "tslib": "^2.6.0",
-    "typescript": "^4.9.3",
-    "vite": "^4.4.2"
+    "typescript": "^4.9.5",
+    "vite": "^4.4.3"
   },
   "dependencies": {
-    "@viewfly/core": "^0.0.2",
-    "@viewfly/platform-browser": "^0.0.2",
-    "@viewfly/router": "^0.0.2",
-    "@viewfly/scoped-css": "^0.0.3",
+    "@viewfly/core": "^0.0.7",
+    "@viewfly/hooks": "^0.0.7",
+    "@viewfly/platform-browser": "^0.0.7",
+    "@viewfly/router": "^0.0.7",
+    "@viewfly/scoped-css": "^0.0.7",
     "uuid": "^9.0.0"
   }
 }
